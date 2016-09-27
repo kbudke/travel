@@ -1,0 +1,26 @@
+<h1>Stay tuned for all my Travel Fun!</h1>
+<p>You're about to be blown away, by all the beauty this world has to offer.</p>
+
+<p>My original homestate is <big><%= @homestate %></big></p>
+
+<ul>
+	<% @countries.each do |country| %>
+	<li><%= country %></li>
+
+	<% end %>
+</ul>
+
+
+<p>
+	
+<% @images.each do |image| %> 
+<%= image_tag image,alt: image, class: "travel-pics" %>
+<% end %>
+</p>
+<p>
+
+<%#= image_tag 'Belize.jpg', alt:'Belize', class: "travel-pics"%>
+<%#= image_tag 'jamaica3.jpg', alt:'Jamaica', class: "travel-pics" %>
+<%#= image_tag 'costa_rica-Water-Fall.jpeg', alt:'Costa Rica', class: "travel-pics" %>
+<%#= image_tag 'panama-canal.jpg', alt:'Panama Canal', class: "travel-pics" %>
+</p> 
