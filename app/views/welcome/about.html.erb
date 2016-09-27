@@ -14,3 +14,13 @@ body {
 <% if @size > 12 %>
  	<p>My feet are huge!</p> 
 <% end %>
+
+
+
+
+<%= link_to "Green", about_path(color: "green"), class: "btn btn-success" %>
+<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+<%= link_to "Pink", about_path(color: "pink"), class: "btn btn-danger" %>
+<%= link_to "Clear Background", about_path, class: "btn btn-default" %>
+
+

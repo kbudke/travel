@@ -1,4 +1,4 @@
-<h1>Stay tuned for all my Travel Fun!</h1>
+<h1 class="bioRhyme">Stay tuned for all my Travel Fun!</h1>
 <p>You're about to be blown away, by all the beauty this world has to offer.</p>
 
 <p>My original homestate is <big><%= @homestate %></big></p>
@@ -14,7 +14,7 @@
 <p>
 	
 <% @images.each do |image| %> 
-<%= image_tag image,alt: image, class: "travel-pics" %>
+<%= image_tag image,alt: image, class: "travel-pics img-responsive" %>
 <% end %>
 </p>
 <p>
