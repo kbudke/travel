@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+  </p>
+<% end %>
+
+<h1 class="bioRhyme">This is where we are heading!</h1>
+<p>
+<%= link_to 'New Destination', new_destination_path, class: "btn btn-success" %></p>
+
+<ul class="nav nav-pills" role="tablist">
+<li> <%= link_to "All", destinations_path %></li>
+
+ <% @my_countries.each do |country| %>
+  <li> <%= link_to country, destinations_path(country: country)  %></li>
+  <% end %>
+</ul>
+
+
+<div class="row">
+  <% @destinations.each do |destination| %>
+      <div class="col-md-4">
+        <div class="well">
+
+        <h2 class="bioRhyme"><%= "#{destination.city}, #{destination.country}" %></h2>
+        <p class="bioRhyme"><%= destination.description %></p>
+        <p class="bioRhyme"><%= link_to 'Show', destination, class: "btn btn-info" %>
+        <%= link_to 'Edit', edit_destination_path(destination), class: "btn btn-warning" %>
+        <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+

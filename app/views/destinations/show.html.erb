@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="bioRhyme">
+  <%= "#{@destination.city}, #{@destination.country} "%>
+</h2>
+
+<p class="bioRhyme"><strong>Pop.:</strong> <%= number_to_human(@destination.population) %>
+</p>
+
+<p> <strong>Coordinates</strong> 
+	<%= @destination.latitude %>, <%= @destination.longitude %>
+</p>
+
+<p><%= image_tag @destination.image.url %> </p>
+
+<p>
+  <%= @destination.description %>
+</p>
+
+<div id="destination-map"></div>
+
+<p>
+<%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-success" %> |
+<%= link_to 'Back', destinations_path, class: "btn btn-primary" %>
+</p>
+
+<%= javascript_tag do %>
+   latitude = '<%= j @destination.latitude.to_s %>';
+   longitude = '<%= j @destination.longitude.to_s %>';
+   address = '<%= j @destination.city %>';
+   description = '<%= j @destination.description %>';
+<% end %>

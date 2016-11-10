@@ -1,0 +1,7 @@
+just extra bits
+
+<p>	
+<% @images.each do |image| %> 
+<%= image_tag image,alt: image, class: "travel-pics img-responsive" %>
+<% end %>
+</p>

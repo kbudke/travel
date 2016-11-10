@@ -1,23 +1,21 @@
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+
 <h1 class="bioRhyme">Stay tuned for all my Travel Fun!</h1>
 <p>You're about to be blown away, by all the beauty this world has to offer.</p>
 
-<p>My original homestate is <big><%= @homestate %></big></p>
-
-<ul>
-	<% @countries.each do |country| %>
-	<li><%= country %></li>
-
-	<% end %>
-</ul>
-
-
+<p class="bioRhyme">My original homestate is <big><%= @homestate %></big></p>
+<p class="bioRhyme">There is more Beauty and adventure than I can even begin to explain right back home in Colorado but there is also so much else out in this big beautiful world that deserves the eyes of the world and that's what we are going to do here. Hopefully you enjoy and stay tuned for future updates and added adventures!</p>
+<h2 class="bioRhyme">These are a start of the images i've gathered from all over. More to come!...</h2>
 <p>
-	
-<% @images.each do |image| %> 
-<%= image_tag image,alt: image, class: "travel-pics img-responsive" %>
-<% end %>
-</p>
-<p>
+
+
+	<div class="single-item">
+		<% @images.each do |image| %> 
+			<div><%= image_tag image, alt: image, class: "travel-pics" %></div>
+		<% end %>
+	</div>
 
 <%#= image_tag 'Belize.jpg', alt:'Belize', class: "travel-pics"%>
 <%#= image_tag 'jamaica3.jpg', alt:'Jamaica', class: "travel-pics" %>

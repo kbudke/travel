@@ -1,26 +1,22 @@
+
+
 <style type="text/css">
 body {
-	background: <%=@color %>;
+	color: <%=@color %>;
 	}
 	</style>
 
 
-<h1>About Kyle's Travels</h1>
-<p>If you're here you must be looking for the bombest new sites or local's to check out on your own personal travels.</p>
+<h1 class="bioRhyme">About Kyle's Travels</h1>
+<p class="bioRhyme">If you're here you must be looking for the most Pristine and Beautiful new sites or local's to check out on your own personal travels.
+	</p>
+	<p class="bioRhyme">on the itinerary still to come is going to be the travels abroad, i'm itching to get to all the new locations and bring pictures and cultures from each to this site. </p>
+<p>soon to come, Hong Kong, Costa Maya, Panama...</p>
 
-<p>My favorite color is <%= @color %>.</p>
-<p>My shoe size is <%= @size %>.</p>
-
-<% if @size > 12 %>
- 	<p>My feet are huge!</p> 
-<% end %>
-
-
-
-
+	<p class="bioRhyme">
 <%= link_to "Green", about_path(color: "green"), class: "btn btn-success" %>
 <%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
 <%= link_to "Pink", about_path(color: "pink"), class: "btn btn-danger" %>
-<%= link_to "Clear Background", about_path, class: "btn btn-default" %>
-
+<%= link_to "Black", about_path(color: "black"), class: "btn btn-default" %>
+</p>
 
